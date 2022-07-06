@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.RegistrationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-03T18:00:39" hostname="MacBook-Pro-Taya.local" time="3.178">
+<testsuite name="tests.RegistrationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-06T16:33:22" hostname="MBP-Taya.lan" time="2.127">
   <properties/>
-  <testcase name="registrationSuccess" classname="tests.RegistrationTests" time="3.178"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="registrationWrongPasswordFormatSize" classname="tests.RegistrationTests" time="2.127"/>
+  <system-out><![CDATA[Password must contain 1 uppercase letter, 1 lowercase letter and one number
+Password must contain minimum 8 symbols
+false
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

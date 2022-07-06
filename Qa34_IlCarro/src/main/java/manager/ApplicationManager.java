@@ -34,12 +34,5 @@ public class ApplicationManager {
         return helperUser;
     }
 
-    public String getMessage() {
-        //wait container
-new WebDriverWait(wd,Duration.ofSeconds(5))
-        .until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector("div.dialog-container"))));
 
-        String  message = wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
-        return message;
-    }
 }

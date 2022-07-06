@@ -6,6 +6,10 @@ import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HelperUser extends HelperBase{
 
@@ -47,13 +51,62 @@ public class HelperUser extends HelperBase{
         int yOffSet = rect.getHeight()/2;
 
         Actions actions = new Actions(wd);
-        actions.moveToElement(label).release().perform();
-        actions.moveByOffset(-xOffSet,-yOffSet).click().release().perform();
+        actions.moveToElement(label,-xOffSet,0).click().release().perform();
+
+
 
     }
 
     public void clickOk() {
-        click(By.xpath("//button[text()='Ok']"));
+        if(isElementPresent(By.xpath("//button[text()='Ok']"))) {
+            click(By.xpath("//button[text()='Ok']"));
+        }
     }
 
+    public boolean isLogged() {
+
+        return isElementPresent(By.xpath("//a[text()=' Logout ']"));
+    }
+
+    public void logout() {
+        click(By.xpath("//a[text()=' Logout ']"));
+    }
+
+
+    public String getMessage() {
+        // pause
+        pause(2000);
+        //wait container
+        new WebDriverWait(wd, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector("div.dialog-container"))));
+
+        //String  message = wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
+        return wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
+    }
+
+    public boolean isErrorPasswordFormatDisplayed() {
+        System.out.println(wd.findElement(By.cssSelector("div.error div:last-child")).getText());
+
+        boolean lastChild = new WebDriverWait(wd, Duration.ofSeconds(5))
+                .until(ExpectedConditions
+                        .textToBePresentInElement(wd.findElement(By.cssSelector("div.error div:last-child")), "Password must contain 1 uppercase letter, 1 lowercase letter and one number"));
+
+        return lastChild;
+    }
+
+    public boolean isErrorPasswordSizeDisplayed() {
+        System.out.println(wd.findElement(By.cssSelector("div.error div:first-child")).getText());
+        return new WebDriverWait(wd, Duration.ofSeconds(5))
+                .until(ExpectedConditions
+                        .textToBePresentInElement(wd.findElement(By.cssSelector("div.error div:first-child")), "Password must contain minimum 8 symbols"));
+
+    }
+
+    public boolean isYallaButtoNotActive() {
+
+        boolean disabled = isElementPresent(By.cssSelector("button[disabled]"));
+       boolean enabled = wd.findElement(By.cssSelector("[type='submit']")).isEnabled();
+        System.out.println(enabled);
+        return disabled&&!enabled;
+    }
 }
