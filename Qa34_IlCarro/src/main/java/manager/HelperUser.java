@@ -27,6 +27,10 @@ public class HelperUser extends HelperBase{
         type(By.id("email"),email);
         type(By.id("password"),password);
     }
+    public void fillLoginForm(User user){
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
+    }
 
     public void openRegistrationForm() {
         click(By.xpath("//a[text()=' Sign up ']"));
@@ -108,5 +112,12 @@ public class HelperUser extends HelperBase{
        boolean enabled = wd.findElement(By.cssSelector("[type='submit']")).isEnabled();
         System.out.println(enabled);
         return disabled&&!enabled;
+    }
+
+    public void login(User user) {
+        openLoginForm();
+        fillLoginForm(user);
+        submit();
+        clickOk();
     }
 }
