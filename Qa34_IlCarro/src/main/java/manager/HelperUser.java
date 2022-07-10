@@ -77,16 +77,7 @@ public class HelperUser extends HelperBase{
     }
 
 
-    public String getMessage() {
-        // pause
-        pause(2000);
-        //wait container
-        new WebDriverWait(wd, Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector("div.dialog-container"))));
 
-        //String  message = wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
-        return wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
-    }
 
     public boolean isErrorPasswordFormatDisplayed() {
         System.out.println(wd.findElement(By.cssSelector("div.error div:last-child")).getText());

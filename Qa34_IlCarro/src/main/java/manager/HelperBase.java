@@ -28,7 +28,16 @@ public class HelperBase {
         wd.findElement(locator).click();
     }
 
+    public String getMessage() {
+        // pause
+        //pause(2000);
+        //wait container
+        new WebDriverWait(wd, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector("div.dialog-container"))));
 
+        //String  message = wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
+        return wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
+    }
     public void submit(){
         new WebDriverWait(wd, Duration.ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(wd.findElement(By.cssSelector("button[type='submit']"))));

@@ -2,8 +2,12 @@ package tests;
 
 import models.Car;
 import models.User;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.Random;
 
 public class AddNewCar extends TestBase{
 
@@ -16,6 +20,9 @@ public class AddNewCar extends TestBase{
 
     @Test
     public void addNewCarSuccess(){
+        Random random = new Random();
+        int i =random.nextInt(1000)+1000;
+
         Car car= Car.builder()
                 .address("Haifa, Israel")
                 .make("BMW")
@@ -29,7 +36,7 @@ public class AddNewCar extends TestBase{
                 .seats("4")
                 .clasS("C")
                 .fuelConsumption("6.5")
-                .carRegNumber("111-22-333")
+                .carRegNumber("22-333-"+i)
                 .price("65")
                 .distanceIncluded("800")
                 .features("type of features")
@@ -41,6 +48,11 @@ public class AddNewCar extends TestBase{
         app.car().fillCarForm(car);
        app.car().attachPhoto("/Users/tayahatum/Qa34/Qa34_IlCarro/auto1.jpeg");
        app.car().submit();
+        Assert.assertEquals(app.car().getMessage(),"Car added");
 
+    }
+    @AfterMethod
+    public void postCondition(){
+        app.car().returnToHome();
     }
 }
