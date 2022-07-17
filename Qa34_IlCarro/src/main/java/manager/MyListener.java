@@ -38,6 +38,9 @@ public class MyListener implements WebDriverListener {
     @Override
     public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
         WebDriverListener.super.onError(target, method, args, e);
+        logger.info("The name of method with error -->" +method.getName());
+        logger.info("We have a problem ---> " +e.getTargetException().fillInStackTrace());
+
     }
 
 }
