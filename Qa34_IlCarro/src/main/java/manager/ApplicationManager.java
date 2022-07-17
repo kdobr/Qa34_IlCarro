@@ -18,6 +18,7 @@ public class ApplicationManager {
     WebDriver wd;
     HelperUser helperUser;
     HelperCar car;
+    HelperSearch search;
 
     public void init(){
 
@@ -32,6 +33,7 @@ public class ApplicationManager {
         logger.info("Current Url --> " +wd.getCurrentUrl());
         helperUser=new HelperUser(wd);
         car= new HelperCar(wd);
+        search = new HelperSearch(wd);
 
     }
 
@@ -40,6 +42,9 @@ public class ApplicationManager {
         wd.quit();
     }
 
+    public HelperSearch search() {
+        return search;
+    }
 
     public HelperUser getHelperUser() {
         return helperUser;
