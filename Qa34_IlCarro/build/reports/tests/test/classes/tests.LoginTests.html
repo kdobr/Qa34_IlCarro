@@ -23,25 +23,25 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">4</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.986s</div>
+<div class="counter">15.214s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,77 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="setUp"></a>
-<h3 class="failures">setUp</h3>
-<span class="code">
-<pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:283)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:184)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:126)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:114)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:94)
-	at app//manager.ApplicationManager.init(ApplicationManager.java:27)
-	at app//tests.TestBase.setUp(TestBase.java:25)
-	at java.base@11.0.15.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.15.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.15.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.15.1/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
-	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
-	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
-	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:368)
-	at app//org.testng.SuiteRunner.run(SuiteRunner.java:326)
-	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-	at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at app//org.testng.TestNG.runSuites(TestNG.java:1092)
-	at app//org.testng.TestNG.run(TestNG.java:1060)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base@11.0.15.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.15.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.15.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.15.1/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
-Build info: version: '4.2.2', revision: '683ccb65d6'
-System info: host: 'MacBook-Pro-Taya.local', ip: 'fe80:0:0:0:1c0e:a83a:d15a:c000%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.5', java.version: '11.0.15.1'
-Driver info: driver.version: FirefoxDriver
-	at app//org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
-	... 44 more
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -142,16 +78,90 @@ Driver info: driver.version: FirefoxDriver
 </tr>
 </thead>
 <tr>
-<td class="skipped">loginSuccess2</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
+<td class="success">loginSuccess[0](noa@gmail.com, Nnoa12345$)</td>
+<td class="success">3.986s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">setUp</td>
-<td class="failures">0.986s</td>
-<td class="failures">failed</td>
+<td class="success">loginSuccess[1](sonya@gmail.com, Ss12345$)</td>
+<td class="success">3.932s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginSuccess[2](noa@gmail.com, Nnoa12345$)</td>
+<td class="success">4.213s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginSuccess[3](sonya@gmail.com, Ss12345$)</td>
+<td class="success">3.083s</td>
+<td class="success">passed</td>
 </tr>
 </table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>19:16:12.594  INFO  tests.TestBase - Start test with name ---&gt;loginSuccess
+19:16:12.598  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //a[text()=' Logout ']
+19:16:17.679  INFO  tests.TestBase - Test start with email : noa@gmail.com &amp; password: Nnoa12345$
+19:16:17.680  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Log in ']
+19:16:17.916  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: email
+19:16:19.974  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: password
+19:16:20.329  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:20.534  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:20.698  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container
+19:16:21.564  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container h1
+19:16:21.652  INFO  tests.TestBase - Test passed
+19:16:21.656  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //button[text()='Ok']
+19:16:21.687  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //button[text()='Ok']
+19:16:21.811  INFO  tests.TestBase - Start test with name ---&gt;loginSuccess
+19:16:21.814  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //a[text()=' Logout ']
+19:16:21.862  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Logout ']
+19:16:22.199  INFO  tests.TestBase - Test start with logout
+19:16:22.201  INFO  tests.TestBase - Test start with email : sonya@gmail.com &amp; password: Ss12345$
+19:16:22.202  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Log in ']
+19:16:22.412  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: email
+19:16:24.290  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: password
+19:16:24.791  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:24.924  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:25.131  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container
+19:16:25.960  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container h1
+19:16:26.129  INFO  tests.TestBase - Test passed
+19:16:26.135  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //button[text()='Ok']
+19:16:26.215  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //button[text()='Ok']
+19:16:26.399  INFO  tests.TestBase - Start test with name ---&gt;loginSuccess
+19:16:26.414  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //a[text()=' Logout ']
+19:16:26.480  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Logout ']
+19:16:26.998  INFO  tests.TestBase - Test start with logout
+19:16:27.006  INFO  tests.TestBase - Test start with email : noa@gmail.com &amp; password: Nnoa12345$
+19:16:27.009  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Log in ']
+19:16:27.334  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: email
+19:16:29.825  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: password
+19:16:30.130  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:30.229  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:30.361  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container
+19:16:31.138  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container h1
+19:16:31.216  INFO  tests.TestBase - Test passed
+19:16:31.218  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //button[text()='Ok']
+19:16:31.289  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //button[text()='Ok']
+19:16:31.395  INFO  tests.TestBase - Start test with name ---&gt;loginSuccess
+19:16:31.397  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //a[text()=' Logout ']
+19:16:31.422  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Logout ']
+19:16:31.782  INFO  tests.TestBase - Test start with logout
+19:16:31.784  INFO  tests.TestBase - Test start with email : sonya@gmail.com &amp; password: Ss12345$
+19:16:31.785  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //a[text()=' Log in ']
+19:16:31.955  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: email
+19:16:33.884  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: password
+19:16:34.190  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:34.341  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+19:16:34.472  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container
+19:16:34.797  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container h1
+19:16:34.866  INFO  tests.TestBase - Test passed
+19:16:34.868  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //button[text()='Ok']
+19:16:34.900  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //button[text()='Ok']
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">
@@ -161,7 +171,7 @@ Driver info: driver.version: FirefoxDriver
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 20 Jul 2022, 20:55:33</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 24 Jul 2022, 19:16:35</p>
 </div>
 </div>
 </body>

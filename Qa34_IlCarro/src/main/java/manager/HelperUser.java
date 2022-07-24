@@ -27,7 +27,7 @@ public class HelperUser extends HelperBase{
         type(By.id("email"),email);
         takeScreenShots("/Users/tayahatum/Qa34/Qa34_IlCarro/Qa34_IlCarro/src/test/screenshots/screen-1.png");
 
-        type(By.id("d"),password);
+        type(By.id("password"),password);
 
 
     }
@@ -101,13 +101,7 @@ public class HelperUser extends HelperBase{
 
     }
 
-    public boolean isYallaButtoNotActive() {
 
-        boolean disabled = isElementPresent(By.cssSelector("button[disabled]"));
-       boolean enabled = wd.findElement(By.cssSelector("[type='submit']")).isEnabled();
-        System.out.println(enabled);
-        return disabled&&!enabled;
-    }
 
     public void login(User user) {
         openLoginForm();

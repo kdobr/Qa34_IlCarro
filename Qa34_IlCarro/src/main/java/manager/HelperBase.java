@@ -43,9 +43,15 @@ public class HelperBase {
         new WebDriverWait(wd, Duration.ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(wd.findElement(By.cssSelector("button[type='submit']"))));
        wd.findElement(By.cssSelector("button[type='submit']")).click();
-       // wd.findElement(By.xpath("//button[text()='Y’alla!']")).click();  // YЕalla!
-    }
 
+
+    }
+    public void submitWithoutWait(){
+
+        wd.findElement(By.cssSelector("button[type='submit']")).click();
+
+
+    }
     public boolean isElementPresent(By locator){
         return wd.findElements(locator).size()>0;
 
@@ -76,5 +82,14 @@ public class HelperBase {
             throw new RuntimeException(e);
         }
 
+    }
+
+
+    public boolean isYallaButtoNotActive() {
+
+        boolean disabled = isElementPresent(By.cssSelector("button[disabled]"));
+        boolean enabled = wd.findElement(By.cssSelector("[type='submit']")).isEnabled();
+        System.out.println(enabled);
+        return disabled&&!enabled;
     }
 }

@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.LoginTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-07-24T16:16:17" hostname="MBP-Taya.lan" time="17.199">
-  <properties/>
-  <testcase name="loginSuccess[0](noa@gmail.com, Nnoa12345$)" classname="tests.LoginTests" time="3.986"/>
-  <testcase name="loginSuccess[1](sonya@gmail.com, Ss12345$)" classname="tests.LoginTests" time="3.932"/>
-  <testcase name="loginSuccess[2](noa@gmail.com, Nnoa12345$)" classname="tests.LoginTests" time="4.213"/>
-  <testcase name="loginSuccess[3](sonya@gmail.com, Ss12345$)" classname="tests.LoginTests" time="3.083"/>
-  <system-out><![CDATA[19:16:12.594  INFO  tests.TestBase - Start test with name --->loginSuccess
+19:16:09.492  INFO  manager.ApplicationManager - All Tests run in Chrome Driver
+19:16:12.541  INFO  manager.ApplicationManager - Current Url --> https://ilcarro-1578153671498.web.app/search
+19:16:12.594  INFO  tests.TestBase - Start test with name --->loginSuccess
 19:16:12.598  INFO  manager.MyListener - New Before find by --> By.xpath: //a[text()=' Logout ']
 19:16:17.679  INFO  tests.TestBase - Test start with email : noa@gmail.com & password: Nnoa12345$
 19:16:17.680  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //a[text()=' Log in ']
@@ -63,6 +58,3 @@
 19:16:34.866  INFO  tests.TestBase - Test passed
 19:16:34.868  INFO  manager.MyListener - New Before find by --> By.xpath: //button[text()='Ok']
 19:16:34.900  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[text()='Ok']
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
