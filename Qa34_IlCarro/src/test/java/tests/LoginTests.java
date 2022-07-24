@@ -1,6 +1,7 @@
 package tests;
 
 import manager.MyDataProvider;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -43,6 +44,15 @@ public class LoginTests extends TestBase {
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in");
 
     }
+    @Test (dataProvider = "loginCSV",dataProviderClass = MyDataProvider.class)
+    public void loginSuccessDP(User user) {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm(user);
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in");
+
+    }
+
 
     @AfterMethod
     public void postCondition() {

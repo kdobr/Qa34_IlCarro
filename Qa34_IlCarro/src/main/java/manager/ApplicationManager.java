@@ -23,8 +23,8 @@ public class ApplicationManager {
 
     public void init(){
 
-        wd=new ChromeDriver();
-       // wd=new FirefoxDriver();
+       // wd=new ChromeDriver();
+        wd=new FirefoxDriver();
        WebDriverListener listener = new MyListener();
        wd=new EventFiringDecorator(listener).decorate(wd);
 
