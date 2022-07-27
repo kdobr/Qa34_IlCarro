@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-27T17:26:53" hostname="MBP-Taya.lan" time="4.978">
+  <properties/>
+  <testcase name="loginSuccess2" classname="tests.LoginTests" time="4.978"/>
+  <system-out><![CDATA[20:26:48.593  INFO  tests.TestBase - Start test with name --->loginSuccess2
+20:26:48.596  INFO  manager.MyListener - New Before find by --> By.xpath: //a[text()=' Logout ']
+20:26:53.655  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //a[text()=' Log in ']
+20:26:53.792  INFO  manager.MyListener - WebDriver start find element -->By.id: email
+20:26:55.631  INFO  manager.MyListener - WebDriver start find element -->By.id: password
+20:26:55.945  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+20:26:56.134  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+20:26:56.278  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: div.dialog-container
+20:26:58.563  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: div.dialog-container h1
+20:26:58.638  INFO  manager.MyListener - New Before find by --> By.xpath: //button[text()='Ok']
+20:26:58.754  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[text()='Ok']
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

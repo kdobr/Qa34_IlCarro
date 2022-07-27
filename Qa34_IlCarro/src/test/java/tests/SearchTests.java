@@ -3,6 +3,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SearchTests extends TestBase {
@@ -52,7 +53,7 @@ public class SearchTests extends TestBase {
         Assert.assertTrue(app.search().isListOfCarsAppeared());
         app.search().takeScreenShots("/Users/tayahatum/Qa34/Qa34_IlCarro/Qa34_IlCarro/src/test/screenshots/screen4.png");
     }
-    @Test
+    @Test(groups = {"web"})
     public void searchAnyPeriod(){
         app.search().searchAnyPeriodLocalDate2("Haifa", "6/10/2023", "7/15/2023");
         app.search().submit();
@@ -61,7 +62,7 @@ public class SearchTests extends TestBase {
     }
 
 
-    @AfterMethod
+    @BeforeMethod (alwaysRun = true)
     public void returnToHome(){
         app.search().returnToHome();
     }

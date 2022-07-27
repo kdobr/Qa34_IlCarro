@@ -1,5 +1,6 @@
 package tests;
 
+import manager.MyDataProvider;
 import models.Car;
 import models.User;
 import org.testng.Assert;
@@ -11,14 +12,14 @@ import java.util.Random;
 
 public class AddNewCar extends TestBase{
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void preCondition(){
         if(!app.getHelperUser().isLogged()){
             app.getHelperUser().login(new User().setEmail("noa@gmail.com").setPassword("Nnoa12345$"));
         }
     }
 
-    @Test
+    @Test (groups = {"web","smoke","regres"})
     public void addNewCarSuccess(){
         Random random = new Random();
         int i =random.nextInt(1000)+1000;
@@ -51,7 +52,17 @@ public class AddNewCar extends TestBase{
         Assert.assertEquals(app.car().getMessage(),"Car added");
 
     }
-    @AfterMethod
+
+    @Test (dataProvider="validDataCar",dataProviderClass = MyDataProvider.class,enabled = false)
+    public void addNewCarSuccess2(Car car) {
+
+        app.car().openCarForm();
+        app.car().fillCarForm(car);
+        app.car().attachPhoto("/Users/tayahatum/Qa34/Qa34_IlCarro/auto1.jpeg");
+        app.car().submit();
+        Assert.assertEquals(app.car().getMessage(), "Car added");
+    }
+        @AfterMethod (alwaysRun = true)
     public void postCondition(){
         app.car().returnToHome();
     }

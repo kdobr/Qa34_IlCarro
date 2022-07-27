@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.RegistrationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-27T17:26:59" hostname="MBP-Taya.lan" time="3.735">
+  <properties/>
+  <testcase name="registrationSuccess" classname="tests.RegistrationTests" time="3.735"/>
+  <system-out><![CDATA[20:26:58.984  INFO  tests.TestBase - Start test with name --->registrationSuccess
+20:26:58.986  INFO  manager.MyListener - New Before find by --> By.xpath: //a[text()=' Logout ']
+20:26:59.101  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //a[text()=' Logout ']
+20:26:59.767  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //a[text()=' Sign up ']
+20:27:00.066  INFO  manager.MyListener - WebDriver start find element -->By.id: name
+20:27:00.812  INFO  manager.MyListener - WebDriver start find element -->By.id: lastName
+20:27:01.229  INFO  manager.MyListener - WebDriver start find element -->By.id: email
+20:27:01.954  INFO  manager.MyListener - WebDriver start find element -->By.id: password
+20:27:02.357  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: label[for='terms-of-use']
+20:27:02.668  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+20:27:02.749  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+20:27:02.845  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: div.dialog-container
+20:27:03.375  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: div.dialog-container h1
+20:27:03.492  INFO  manager.MyListener - New Before find by --> By.xpath: //button[text()='Ok']
+20:27:03.598  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[text()='Ok']
+]]></system-out>
+  <system-err><![CDATA[Jul 27, 2022 8:27:02 PM org.openqa.selenium.interactions.Actions moveToElement
+INFO: When using the W3C Action commands, offsets are from the element's in-view center point
+]]></system-err>
+</testsuite>

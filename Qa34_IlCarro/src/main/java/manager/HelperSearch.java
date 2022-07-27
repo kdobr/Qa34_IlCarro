@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -51,6 +54,8 @@ public class HelperSearch extends HelperBase{
     }
 
     private void typeCity(String city) {
+        new WebDriverWait(wd, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOf(wd.findElement(By.id("city"))));
         type(By.id("city"),city);
         pause(500);
         click(By.cssSelector(".pac-item"));
