@@ -33,6 +33,8 @@ public class HelperUser extends HelperBase{
     public void fillLoginForm(User user){
         type(By.id("email"), user.getEmail());
         type(By.id("password"), user.getPassword());
+
+        // for jenkins
     }
 
     public void openRegistrationForm() {
