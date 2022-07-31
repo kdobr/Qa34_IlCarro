@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.SearchTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-27T17:27:16" hostname="MBP-Taya.lan" time="5.598">
+<testsuite name="tests.SearchTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-31T13:07:08" hostname="MBP-Taya.lan" time="6.693">
   <properties/>
-  <testcase name="searchAnyPeriod" classname="tests.SearchTests" time="5.598"/>
-  <system-out><![CDATA[20:27:15.381  INFO  tests.TestBase - Start test with name --->searchAnyPeriod
-20:27:15.387  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: .logo
-20:27:16.295  INFO  manager.MyListener - WebDriver start find element -->By.id: city
-20:27:16.342  INFO  manager.MyListener - WebDriver start find element -->By.id: city
-20:27:17.237  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: .pac-item
-20:27:17.323  INFO  manager.MyListener - WebDriver start find element -->By.id: dates
+  <testcase name="searchAnyPeriod" classname="tests.SearchTests" time="6.693"/>
+  <system-out><![CDATA[16:07:08.662  INFO  tests.TestBase - Start test with name --->searchAnyPeriod
+16:07:08.663  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: .logo
+16:07:08.974  INFO  manager.MyListener - WebDriver start find element -->By.id: city
+16:07:09.001  INFO  manager.MyListener - WebDriver start find element -->By.id: city
+16:07:09.757  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: .pac-item
+16:07:10.484  INFO  manager.MyListener - WebDriver start find element -->By.id: dates
 Mac OS X
-20:27:17.526  INFO  manager.MyListener - WebDriver start find element -->By.id: dates
-20:27:17.829  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.000  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.205  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.312  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.432  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.548  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.683  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.800  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:18.984  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:19.141  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:19.255  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:19.374  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //div[text()=' 10 ']
-20:27:19.525  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
-20:27:19.682  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //div[text()=' 15 ']
-20:27:19.940  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
-20:27:20.035  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
-20:27:20.305  INFO  manager.MyListener - New Before find by --> By.cssSelector: .cars-container.ng-star-inserted
+16:07:10.538  INFO  manager.MyListener - WebDriver start find element -->By.id: dates
+16:07:10.866  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:11.131  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:11.381  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:11.633  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:11.893  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:12.142  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:12.396  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:12.645  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:12.892  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:13.148  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:13.396  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:13.650  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //div[text()=' 10 ']
+16:07:13.901  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //button[@aria-label='Next month']
+16:07:14.154  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //div[text()=' 15 ']
+16:07:14.411  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+16:07:14.447  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+16:07:14.751  INFO  manager.MyListener - New Before find by --> By.cssSelector: .cars-container.ng-star-inserted
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[1659272830278	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://ilcarro-1578153671498.web.app"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://ilcarro-1578153671498.web.app"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+]]></system-err>
 </testsuite>

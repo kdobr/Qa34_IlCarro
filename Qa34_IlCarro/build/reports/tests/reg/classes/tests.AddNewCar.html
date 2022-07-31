@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">11.393s</div>
+<div class="counter">10.604s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -79,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">addNewCarSuccess</td>
-<td class="success">11.393s</td>
+<td class="success">10.604s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,33 +90,46 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:27:03.738  INFO  tests.TestBase - Start test with name ---&gt;addNewCarSuccess
-20:27:03.741  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //a[text()=' Logout ']
-20:27:04.805  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: 1
-20:27:04.948  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: pickUpPlace
-20:27:05.418  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.pac-item
-20:27:06.455  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: make
-20:27:06.788  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: model
-20:27:07.102  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: year
-20:27:07.530  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: engine
-20:27:07.892  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: fuel
-20:27:08.202  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: gear
-20:27:08.488  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: wheelsDrive
-20:27:08.751  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: doors
-20:27:09.223  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: seats
-20:27:09.505  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: class
-20:27:09.998  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: fuelConsumption
-20:27:10.444  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: serialNumber
-20:27:10.823  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: price
-20:27:11.201  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: distance
-20:27:11.610  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: input[placeholder='Type feature']
-20:27:11.872  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: about
-20:27:12.062  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: photos
-20:27:12.179  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
-20:27:13.823  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
-20:27:13.957  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container
-20:27:15.094  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container h1
-20:27:15.185  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //button[text()='Search cars']
+<pre>16:06:57.801  INFO  tests.TestBase - Start test with name ---&gt;addNewCarSuccess
+16:06:57.804  INFO  manager.MyListener - New Before find by --&gt; By.xpath: //a[text()=' Logout ']
+16:06:58.834  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: 1
+16:06:59.143  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: pickUpPlace
+16:06:59.504  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.pac-item
+16:07:01.110  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: make
+16:07:01.376  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: model
+16:07:01.628  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: year
+16:07:01.900  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: engine
+16:07:02.149  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: fuel
+16:07:02.429  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: gear
+16:07:02.692  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: wheelsDrive
+16:07:02.956  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: doors
+16:07:03.199  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: seats
+16:07:03.453  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: class
+16:07:03.702  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: fuelConsumption
+16:07:03.961  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: serialNumber
+16:07:04.229  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: price
+16:07:04.479  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: distance
+16:07:04.740  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: input[placeholder='Type feature']
+16:07:04.993  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: about
+16:07:05.253  INFO  manager.MyListener - WebDriver start find element --&gt;By.id: photos
+16:07:05.304  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+16:07:06.919  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: button[type='submit']
+16:07:07.164  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container
+16:07:08.406  INFO  manager.MyListener - WebDriver start find element --&gt;By.cssSelector: div.dialog-container h1
+16:07:08.432  INFO  manager.MyListener - WebDriver start find element --&gt;By.xpath: //button[text()='Search cars']
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1659272820401	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/&lt;@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
 </pre>
 </span>
 </div>
@@ -125,7 +141,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 27 Jul 2022, 20:27:22</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 31 Jul 2022, 16:07:16</p>
 </div>
 </div>
 </body>
